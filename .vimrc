@@ -13,8 +13,12 @@ set autoindent
 set copyindent
 
 
+autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+
+
 set list
-set listchars=tab:>.,trail:.,extends:#,nbsp:.
+set listchars=tab:▸\.,trail:.,extends:#,nbsp:.
+autocmd BufWritePre * :%s/\s\+$//e
 
 
 set hlsearch
@@ -24,13 +28,19 @@ set smartcase
 set ignorecase
 
 
+set number
+set cursorline
+highlight clear CursorLine
+highlight LineNr term=none ctermfg=243 ctermbg=235
+highlight CursorLineNr term=bold cterm=none ctermfg=red ctermbg=none
+
+
 set history=9999
 set undolevels=1000
 set noerrorbells
 set visualbell
 set title
 set noswapfile
-set number
 set nobackup
 set fenc=utf-8
 set fencs=utf-8,gb18030,gbk,gb2312,cp936
@@ -68,7 +78,7 @@ NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'flazz/vim-colorschemes'
 NeoBundle 'tacahiroy/ctrlp-funky'
-NeoBundle 'Valloric/YouCompleteMe'
+"NeoBundle 'Valloric/YouCompleteMe'
 NeoBundle 'sheerun/vim-polyglot'
 NeoBundle 'fatih/vim-go'
 NeoBundle 'Yggdroot/indentLine'
@@ -105,10 +115,13 @@ let g:ctrlp_extensions = ['funky']
 let g:ctrlp_funky_syntax_highlight = 1
 "-------------- ctrlP end   -----
 
+
+
 "---------- vim-go start ---------
 let g:go_fmt_command = "goimports"
 let g:go_fmt_autosave = 1
 "---------- vim-go end ---------
+
 
 
 let g:syntastic_always_populate_loc_list = 1

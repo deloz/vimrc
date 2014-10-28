@@ -11,6 +11,7 @@ set smartindent
 set cindent
 set autoindent
 set copyindent
+set t_Co=256
 
 
 autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
@@ -31,7 +32,7 @@ set ignorecase
 set number
 set cursorline
 highlight clear CursorLine
-highlight LineNr term=none ctermfg=243 ctermbg=235
+highlight LineNr term=none ctermfg=115 ctermbg=235
 highlight CursorLineNr term=bold cterm=none ctermfg=red ctermbg=none
 
 

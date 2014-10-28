@@ -111,7 +111,8 @@ let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_working_path_mode = 'ra'
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip
-
+let g:ctrlp_mruf_max = 9999
+let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:50,results:50'
 let g:ctrlp_extensions = ['funky']
 let g:ctrlp_funky_syntax_highlight = 1
 "-------------- ctrlP end   -----

@@ -88,6 +88,7 @@ NeoBundle 'tpope/vim-repeat'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'bling/vim-airline'
 NeoBundle 'jiangmiao/auto-pairs'
+NeoBundle 'stephpy/vim-php-cs-fixer'
 
 
 " You can specify revision/branch/tag.
@@ -125,8 +126,23 @@ let g:go_fmt_autosave = 1
 "---------- vim-go end ---------
 
 
-
+"---------- syntastic start -------
 let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_php_checkers = ['php']
+"---------- syntastic end -------
+
+
+"---------- php-cs-fixer start -------
+let g:php_cs_fixer_level = "all"                  " which level ?
+let g:php_cs_fixer_config = "default"             " configuration
+let g:php_cs_fixer_php_path = "php"               " Path to PHP
+" If you want to define specific fixers:
+"let g:php_cs_fixer_fixers_list = "linefeed,short_tag,indentation"
+let g:php_cs_fixer_enable_default_mapping = 1     " Enable the mapping by default (<leader>pcd)
+let g:php_cs_fixer_dry_run = 0                    " Call command with dry-run option
+let g:php_cs_fixer_verbose = 0                    " Return the output of command if 1, else an inline information.
+"---------- php-cs-fixer end -------
+
 
 "---- airline start ---------
 let g:airline#extensions#tabline#enabled = 1

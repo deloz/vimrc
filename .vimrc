@@ -89,6 +89,7 @@ NeoBundle 'scrooloose/syntastic'
 NeoBundle 'bling/vim-airline'
 NeoBundle 'jiangmiao/auto-pairs'
 NeoBundle 'stephpy/vim-php-cs-fixer'
+NeoBundle 'vim-ruby/vim-ruby'
 
 
 " You can specify revision/branch/tag.

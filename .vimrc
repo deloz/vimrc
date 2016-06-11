@@ -91,6 +91,7 @@ NeoBundle 'jiangmiao/auto-pairs'
 NeoBundle 'stephpy/vim-php-cs-fixer'
 NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'fatih/molokai'
+NeoBundle 'Shougo/neocomplete.vim'
 
 
 " You can specify revision/branch/tag.
@@ -157,3 +158,8 @@ set laststatus=2
 "---- colorscheme start -------
 colorscheme molokai
 "---- colorscheme end ---------
+
+
+"---- neocomplete end ---------
+let g:neocomplete#enable_at_startup = 1
+"---- neocomplete end ---------

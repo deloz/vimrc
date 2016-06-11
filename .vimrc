@@ -90,6 +90,7 @@ NeoBundle 'bling/vim-airline'
 NeoBundle 'jiangmiao/auto-pairs'
 NeoBundle 'stephpy/vim-php-cs-fixer'
 NeoBundle 'vim-ruby/vim-ruby'
+NeoBundle 'fatih/molokai'
 
 
 " You can specify revision/branch/tag.
@@ -152,3 +153,7 @@ let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
 set laststatus=2
 "---- airline end ---------
+
+"---- colorscheme start -------
+colorscheme molokai
+"---- colorscheme end ---------
